@@ -6,6 +6,9 @@ const cors = require("cors");
 const app = express();
 const { PORT=7777 } = process.env;
 
-app.get("/", (req, res) => res.send("Hello World"));
+app.get("/", (req, res) => res.send({
+    status: 200,
+    msg: "Thank you for connecting to the Tunr API!"
+}));
 
 app.listen(PORT, () => console.log(`port running on ${PORT}`));
