@@ -5,7 +5,7 @@ const songSchema = new Schema ({
     name: String,
     artist: String,
     time: String,
-    isFavorite: Boolean
+    isFavorite: {type: Boolean, default: false}
 }, {timestamps: true})
 
 //Publish the model
