@@ -4,7 +4,8 @@ const {Schema, model} = require("mongoose")
 const songSchema = new Schema ({
     name: String,
     artist: String,
-    time: String
+    time: String,
+    isFavorite: Boolean
 }, {timestamps: true})
 
 //Publish the model
