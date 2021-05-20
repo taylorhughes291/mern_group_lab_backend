@@ -22,6 +22,17 @@ router.post('/', async (req, res) => {
     })
 })
 
+//update Route
+router.put('/:id', async (req, res) => {
+    const id = req.params.id
+    const body = req.body
+    const updatedSong = await Song.findByIdAndUpdate(id, body, {new: true})
+    res.json({
+        status: 200,
+        data: updatedSong
+    })
+})
+
 // Delete songs route
 router.delete('/:id', async (req, res) => {
     const id = req.params.id
